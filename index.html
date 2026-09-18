@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapCompress - Free Client-Side Image Compressor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">SnapCompress</div>
+        <div class="tagline">Fast, Private & Local Web Utility</div>
+    </header>
+
+    <main class="container">
+        <!-- Main Utility Tool -->
+        <section class="tool-card">
+            <h1>Compress Images Online in Seconds</h1>
+            <p>Reduce PNG and JPG file sizes locally in your browser with zero quality loss and no server uploads.</p>
+            
+            <div class="drop-zone" id="dropZone">
+                <input type="file" id="fileInput" accept="image/png, image/jpeg, image/webp" hidden>
+                <p>Drag & drop your image here or <span class="browse-btn" id="browseBtn">Browse File</span></p>
+            </div>
+
+            <div class="controls" id="controls" style="display: none;">
+                <label for="quality">Compression Quality: <span id="qualityVal">80%</span></label>
+                <input type="range" id="quality" min="10" max="100" value="80">
+
+                <div class="stats-box">
+                    <div>Original: <strong id="origSize">0 KB</strong></div>
+                    <div>Compressed: <strong id="compSize">0 KB</strong></div>
+                    <div>Savings: <strong id="savings">0%</strong></div>
+                </div>
+
+                <div class="preview-box">
+                    <img id="previewImg" alt="Compressed Preview">
+                </div>
+
+                <button id="downloadBtn" class="action-btn">Download Compressed Image</button>
+            </div>
+        </section>
+
+        <!-- SEO Article & Guide Section (Mandatory for AdSense Approval) -->
+        <article class="guide-section">
+            <h2>How Client-Side Image Compression Works</h2>
+            <p>SnapCompress uses modern HTML5 Canvas API technology to process and compress images directly inside your web browser. Traditional online image tools force users to upload their sensitive images to remote cloud servers, which presents privacy risks and consumes massive bandwidth. By leveraging local browser capabilities, your images never leave your local device or network.</p>
+
+            <h3>Why Compress Your Web Graphics?</h3>
+            <p>Image files often account for over 60% of total web page payload sizes. Uncompressed photos from mobile devices or DSLR cameras contain heavy metadata, high color bitrates, and extra pixel density that slow down website loading speeds. Compressing graphics before publishing them offers major performance benefits:</p>
+            <ul>
+                <li><strong>Faster Page Load Times:</strong> Smaller image file sizes render instantly across slow mobile networks.</li>
+                <li><strong>Improved SEO & Core Web Vitals:</strong> Search engines like Google rank fast-loading websites higher in search results.</li>
+                <li><strong>Reduced Bandwidth Costs:</strong> Saving storage space cuts hosting bandwidth consumption for site owners.</li>
+            </ul>
+
+            <h3>Frequently Asked Questions (FAQ)</h3>
+            <div class="faq-item">
+                <h4>Is SnapCompress completely free to use?</h4>
+                <p>Yes, SnapCompress is 100% free with no hidden subscriptions, limitations, or forced user account registration.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Are my images stored on any server?</h4>
+                <p>No. All calculations, pixel resizing, and canvas rendering happen locally in your web browser's engine. Your data is entirely private.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SnapCompress Utility. Built with pure HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
